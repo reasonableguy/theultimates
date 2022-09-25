@@ -37,6 +37,47 @@ color:#d2232a;
   .plays{
    background:#e1e1e1;
   }
+  
+  .text_1 {
+  animation: text1;
+}
+.text_2 {
+  animation: text2;
+}
+.text_1, .text_2 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 20s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+.text_1::after, .text_2::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+  @keyframes text2 {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  
+  60%, 90% {
+    width: 2em;
+  }
+}
+@keyframes text1 {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  10%, 40% {
+    width: 4.5em;
+  }
+}
 </style>
 </head>
 <body>
@@ -49,7 +90,7 @@ color:#d2232a;
 <p>
 Here are just a few thoughts for those who are more visual learners (and/or have trouble with my accent) to help us play together on the same page.<br>
   Unfortunately, I can't create plays with decision-based options so I've created 1A, 1B etc to show variations.
-  I've included responsibilities for each player to but I obviosuly cvan't cover all eventualities.<br><br> The goal is to play well together and have fun.
+  I've included responsibilities for each player to but I obviosuly cvan't cover all eventualities.<br><br> The goal is to play well together and <span class="text_1">have fun.</span><span class="text_2">win!</span>
   <br><br>
   Let me know if you have any thoughts or questions.
     </p>
