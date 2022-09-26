@@ -38,64 +38,48 @@ color:#d2232a;
    background:#e1e1e1;
   }
   
-  .text_1 {
+ .text_1 {
   animation: text1;
 }
 .text_2 {
   animation: text2;
 }
-  
 .text_1, .text_2 {
-    overflow: hidden;
+  overflow: hidden;
   white-space: nowrap;
   display: inline-block;
   position: relative;
-    animation-duration: 20s;
+  animation-duration: 20s;
   animation-timing-function: steps(25, end);
   animation-iteration-count: infinite;
-    bottom: -3.5 !important;
-
 }
-  .text_2::before {
-    content: "having fun";
-  position: absolute;
-  left: 0;
-  animation: caret infinite;
-  animation-duration: 1s;
-  animation-timing-function: steps(1, end);
-}
-  
 .text_1::after, .text_2::after {
-  content: " |";
+  content: "|";
   position: absolute;
   right: 0;
   animation: caret infinite;
   animation-duration: 1s;
   animation-timing-function: steps(1, end);
 }
-
   
-  60%, 90% {
-    width: 0;
-  }
-}
   @keyframes text2 {
   0%, 50%, 100% {
     width: 0;
   }
   
   60%, 90% {
-    width: 2em;
+    width: 21.2em;
   }
 }
 @keyframes text1 {
- 0%, 50%, 100% {
+  0%, 50%, 100% {
     width: 0;
   }
- 10%, 40% {
-    width: 4.5em;
+  10%, 40% {
+    width: 17em;
   }
 }
+  
 </style>
 </head>
 <body>
