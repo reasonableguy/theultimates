@@ -37,7 +37,7 @@ color:#d2232a;
   .plays{
    background:#e1e1e1;
   }
-  
+ 
  .text_1 {
   animation: text1;
 }
@@ -49,7 +49,7 @@ color:#d2232a;
   white-space: nowrap;
   display: inline-block;
   position: relative;
-  animation-duration: 20s;
+  animation-duration: 15s;
   animation-timing-function: steps(25, end);
   animation-iteration-count: infinite;
   bottom:-3.5;
@@ -61,26 +61,43 @@ color:#d2232a;
   animation: caret infinite;
   animation-duration: 1s;
   animation-timing-function: steps(1, end);
+  blink-caret .5s step-end infinite;
 }
-  
-  @keyframes text2 {
-  0%, 50%, 100% {
+@keyframes typewriter {
+  0%, 100% {
+    width: 0;
+  }
+  20%, 80% {
+    width: 10.2em;
+  }
+}
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+ @keyframes text2 {
+  0%, 25%, 75%, 100% {
     width: 0;
   }
   
-  60%, 90% {
-    width: 2.1em;
+   50%, 67.5% {
+    width: 4em;
   }
 }
+
 @keyframes text1 {
-  0%, 50%, 100% {
+  25%, 50%, 75% {
     width: 0;
   }
-  10%, 40% {
-    width: 4.6em;
+  0%,12.5%, 100%{
+    width: 4em;
   }
 }
-  
 </style>
 </head>
 <body>
