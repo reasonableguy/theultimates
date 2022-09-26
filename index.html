@@ -49,11 +49,11 @@ color:#d2232a;
 }
   
 .text_1, .text_2 {
-  overflow: hidden;
+    overflow: hidden;
   white-space: nowrap;
   display: inline-block;
   position: relative;
-  animation-duration: 20s;
+    animation-duration: 20s;
   animation-timing-function: steps(25, end);
   animation-iteration-count: infinite;
     bottom: -3.5 !important;
@@ -72,7 +72,7 @@ color:#d2232a;
 }
   
 .text_1::after, .text_2::after {
-  content: "";
+  content: " |";
   position: absolute;
   right: 0;
   animation: caret infinite;
